@@ -1,0 +1,935 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/jaakkos/winston-logstash"
+
+    >winston-logstash (v0.3.0)</a>
+</h1>
+<h4>A Logstash transport for winston</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.winston-logstash">module winston-logstash</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.winston-logstash.Logstash">
+            function <span class="apidocSignatureSpan">winston-logstash.</span>Logstash
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.winston-logstash.Logstash.super_">
+            function <span class="apidocSignatureSpan">winston-logstash.</span>Logstash.super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">winston-logstash.</span>Logstash.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">winston-logstash.</span>Logstash.super_.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.winston-logstash.Logstash">module winston-logstash.Logstash</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.winston-logstash.Logstash.Logstash">
+            function <span class="apidocSignatureSpan">winston-logstash.</span>Logstash
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.winston-logstash.Logstash.super_">
+            function <span class="apidocSignatureSpan">winston-logstash.Logstash.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.winston-logstash.Logstash.prototype">module winston-logstash.Logstash.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.winston-logstash.Logstash.prototype.announce">
+            function <span class="apidocSignatureSpan">winston-logstash.Logstash.prototype.</span>announce
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.winston-logstash.Logstash.prototype.close">
+            function <span class="apidocSignatureSpan">winston-logstash.Logstash.prototype.</span>close
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.winston-logstash.Logstash.prototype.connect">
+            function <span class="apidocSignatureSpan">winston-logstash.Logstash.prototype.</span>connect
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.winston-logstash.Logstash.prototype.flush">
+            function <span class="apidocSignatureSpan">winston-logstash.Logstash.prototype.</span>flush
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.winston-logstash.Logstash.prototype.getQueueLength">
+            function <span class="apidocSignatureSpan">winston-logstash.Logstash.prototype.</span>getQueueLength
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.winston-logstash.Logstash.prototype.log">
+            function <span class="apidocSignatureSpan">winston-logstash.Logstash.prototype.</span>log
+            <span class="apidocSignatureSpan">(level, msg, meta, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.winston-logstash.Logstash.prototype.sendLog">
+            function <span class="apidocSignatureSpan">winston-logstash.Logstash.prototype.</span>sendLog
+            <span class="apidocSignatureSpan">(message, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">winston-logstash.Logstash.prototype.</span>name</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.winston-logstash.Logstash.super_">module winston-logstash.Logstash.super_</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.winston-logstash.Logstash.super_.super_">
+            function <span class="apidocSignatureSpan">winston-logstash.Logstash.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.winston-logstash.Logstash.super_.prototype">module winston-logstash.Logstash.super_.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.winston-logstash.Logstash.super_.prototype.formatQuery">
+            function <span class="apidocSignatureSpan">winston-logstash.Logstash.super_.prototype.</span>formatQuery
+            <span class="apidocSignatureSpan">(query)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.winston-logstash.Logstash.super_.prototype.formatResults">
+            function <span class="apidocSignatureSpan">winston-logstash.Logstash.super_.prototype.</span>formatResults
+            <span class="apidocSignatureSpan">(results, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.winston-logstash.Logstash.super_.prototype.logException">
+            function <span class="apidocSignatureSpan">winston-logstash.Logstash.super_.prototype.</span>logException
+            <span class="apidocSignatureSpan">(msg, meta, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.winston-logstash.Logstash.super_.prototype.normalizeQuery">
+            function <span class="apidocSignatureSpan">winston-logstash.Logstash.super_.prototype.</span>normalizeQuery
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.winston-logstash" id="apidoc.module.winston-logstash">module winston-logstash</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.winston-logstash.Logstash" id="apidoc.element.winston-logstash.Logstash">
+        function <span class="apidocSignatureSpan">winston-logstash.</span>Logstash
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Logstash = function (options) {
+  winston.Transport.call(this, options);
+  options = options || {};
+
+  this.name                = &#x27;logstash&#x27;;
+  this.localhost           = options.localhost || os.hostname();
+  this.host                = options.host || &#x27;127.0.0.1&#x27;;
+  this.port                = options.port || 28777;
+  this.node_name           = options.node_name || process.title;
+  this.pid                 = options.pid || process.pid;
+  this.max_connect_retries = (&#x27;number&#x27; === typeof options.max_connect_retries) ? options.max_connect_retries : 4;
+  this.timeout_connect_retries = (&#x27;number&#x27; === typeof options.timeout_connect_retries) ? options.timeout_connect_retries : 100;
+  this.retries             = -1;
+
+  // Support for winston build in logstash format
+  // https://github.com/flatiron/winston/blob/master/lib/winston/common.js#L149
+  this.logstash            = options.logstash || false;
+
+  // SSL Settings
+  this.ssl_enable          = options.ssl_enable || false;
+  this.ssl_key             = options.ssl_key || &#x27;&#x27;;
+  this.ssl_cert            = options.ssl_cert || &#x27;&#x27;;
+  this.ca                  = options.ca || &#x27;&#x27;;
+  this.ssl_passphrase      = options.ssl_passphrase || &#x27;&#x27;;
+  this.rejectUnauthorized  = options.rejectUnauthorized === true;
+
+  // Connection state
+  this.log_queue           = [];
+  this.connected           = false;
+  this.socket              = null;
+
+  // Miscellaneous options
+  this.strip_colors        = options.strip_colors || false;
+  this.label               = options.label || this.node_name;
+  this.meta_defaults       = options.meta || {};
+
+  // We want to avoid copy-by-reference for meta defaults, so make sure it&#x27;s a flat object.
+  for (var property in this.meta_defaults) {
+    if (typeof this.meta_defaults[property] === &#x27;object&#x27;) {
+      delete this.meta_defaults[property];
+    }
+  }
+
+  this.connect();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.winston-logstash.Logstash.super_" id="apidoc.element.winston-logstash.Logstash.super_">
+        function <span class="apidocSignatureSpan">winston-logstash.</span>Logstash.super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Logstash.super_ = function (options) {
+  events.EventEmitter.call(this);
+
+  options        = options        || {};
+  this.silent    = options.silent || false;
+  this.raw       = options.raw    || false;
+  this.name      = options.name   || this.name;
+  this.formatter = options.formatter;
+
+  //
+  // Do not set a default level. When `level` is falsey on any
+  // `Transport` instance, any `Logger` instance uses the
+  // configured level (instead of the Transport level)
+  //
+  this.level = options.level;
+
+  this.handleExceptions = options.handleExceptions || false;
+  this.exceptionsLevel  = options.exceptionsLevel || &#x27;error&#x27;;
+  this.humanReadableUnhandledException = options.humanReadableUnhandledException || false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.winston-logstash.Logstash" id="apidoc.module.winston-logstash.Logstash">module winston-logstash.Logstash</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.winston-logstash.Logstash.Logstash" id="apidoc.element.winston-logstash.Logstash.Logstash">
+        function <span class="apidocSignatureSpan">winston-logstash.</span>Logstash
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Logstash = function (options) {
+  winston.Transport.call(this, options);
+  options = options || {};
+
+  this.name                = &#x27;logstash&#x27;;
+  this.localhost           = options.localhost || os.hostname();
+  this.host                = options.host || &#x27;127.0.0.1&#x27;;
+  this.port                = options.port || 28777;
+  this.node_name           = options.node_name || process.title;
+  this.pid                 = options.pid || process.pid;
+  this.max_connect_retries = (&#x27;number&#x27; === typeof options.max_connect_retries) ? options.max_connect_retries : 4;
+  this.timeout_connect_retries = (&#x27;number&#x27; === typeof options.timeout_connect_retries) ? options.timeout_connect_retries : 100;
+  this.retries             = -1;
+
+  // Support for winston build in logstash format
+  // https://github.com/flatiron/winston/blob/master/lib/winston/common.js#L149
+  this.logstash            = options.logstash || false;
+
+  // SSL Settings
+  this.ssl_enable          = options.ssl_enable || false;
+  this.ssl_key             = options.ssl_key || &#x27;&#x27;;
+  this.ssl_cert            = options.ssl_cert || &#x27;&#x27;;
+  this.ca                  = options.ca || &#x27;&#x27;;
+  this.ssl_passphrase      = options.ssl_passphrase || &#x27;&#x27;;
+  this.rejectUnauthorized  = options.rejectUnauthorized === true;
+
+  // Connection state
+  this.log_queue           = [];
+  this.connected           = false;
+  this.socket              = null;
+
+  // Miscellaneous options
+  this.strip_colors        = options.strip_colors || false;
+  this.label               = options.label || this.node_name;
+  this.meta_defaults       = options.meta || {};
+
+  // We want to avoid copy-by-reference for meta defaults, so make sure it&#x27;s a flat object.
+  for (var property in this.meta_defaults) {
+    if (typeof this.meta_defaults[property] === &#x27;object&#x27;) {
+      delete this.meta_defaults[property];
+    }
+  }
+
+  this.connect();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.winston-logstash.Logstash.super_" id="apidoc.element.winston-logstash.Logstash.super_">
+        function <span class="apidocSignatureSpan">winston-logstash.Logstash.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">super_ = function (options) {
+  events.EventEmitter.call(this);
+
+  options        = options        || {};
+  this.silent    = options.silent || false;
+  this.raw       = options.raw    || false;
+  this.name      = options.name   || this.name;
+  this.formatter = options.formatter;
+
+  //
+  // Do not set a default level. When `level` is falsey on any
+  // `Transport` instance, any `Logger` instance uses the
+  // configured level (instead of the Transport level)
+  //
+  this.level = options.level;
+
+  this.handleExceptions = options.handleExceptions || false;
+  this.exceptionsLevel  = options.exceptionsLevel || &#x27;error&#x27;;
+  this.humanReadableUnhandledException = options.humanReadableUnhandledException || false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.winston-logstash.Logstash.prototype" id="apidoc.module.winston-logstash.Logstash.prototype">module winston-logstash.Logstash.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.winston-logstash.Logstash.prototype.announce" id="apidoc.element.winston-logstash.Logstash.prototype.announce">
+        function <span class="apidocSignatureSpan">winston-logstash.Logstash.prototype.</span>announce
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">announce = function () {
+  var self = this;
+  self.connected = true;
+  self.flush();
+  if (self.terminating) {
+    self.close();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      });
+
+      return caFilesList;
+    }(this.ca)) : null
+  };
+  this.socket = new tls.connect(this.port, this.host, options, function() {
+    self.socket.setEncoding(&#x27;UTF-8&#x27;);
+    self.<span class="apidocCodeKeywordSpan">announce</span>();
+    self.connecting = false;
+  });
+} else {
+  this.socket = new net.Socket();
+}
+
+this.socket.on(&#x27;error&#x27;, function (err) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.winston-logstash.Logstash.prototype.close" id="apidoc.element.winston-logstash.Logstash.prototype.close">
+        function <span class="apidocSignatureSpan">winston-logstash.Logstash.prototype.</span>close
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">close = function () {
+  var self = this;
+  self.terminating = true;
+  if (self.connected &#x26;&#x26; self.socket) {
+    self.connected = false;
+    self.socket.end();
+    self.socket.destroy();
+    self.socket = null;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+Logstash.prototype.announce = function () {
+var self = this;
+self.connected = true;
+self.flush();
+if (self.terminating) {
+  self.<span class="apidocCodeKeywordSpan">close</span>();
+}
+};
+
+Logstash.prototype.flush = function () {
+var self = this;
+
+for (var i = 0; i &#x3c; self.log_queue.length; i++) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.winston-logstash.Logstash.prototype.connect" id="apidoc.element.winston-logstash.Logstash.prototype.connect">
+        function <span class="apidocSignatureSpan">winston-logstash.Logstash.prototype.</span>connect
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">connect = function () {
+  var tryReconnect = true;
+  var options = {};
+  var self = this;
+  this.retries++;
+  this.connecting = true;
+  this.terminating = false;
+  if (this.ssl_enable) {
+    options = {
+      key: this.ssl_key ? fs.readFileSync(this.ssl_key) : null,
+      cert: this.ssl_cert ? fs.readFileSync(this.ssl_cert) : null,
+      passphrase: this.ssl_passphrase ? this.ssl_passphrase : null,
+      rejectUnauthorized: this.rejectUnauthorized === true,
+      ca: this.ca ? (function (caList) {
+        var caFilesList = [];
+
+        caList.forEach(function (filePath) {
+          caFilesList.push(fs.readFileSync(filePath));
+        });
+
+        return caFilesList;
+      }(this.ca)) : null
+    };
+    this.socket = new tls.connect(this.port, this.host, options, function() {
+      self.socket.setEncoding(&#x27;UTF-8&#x27;);
+      self.announce();
+      self.connecting = false;
+    });
+  } else {
+    this.socket = new net.Socket();
+  }
+
+  this.socket.on(&#x27;error&#x27;, function (err) {
+    self.connecting = false;
+    self.connected = false;
+
+    if (typeof(self.socket) !== &#x27;undefined&#x27; &#x26;&#x26; self.socket != null) {
+      self.socket.destroy();
+    }
+
+    self.socket = null;
+
+    if (!ECONNREFUSED_REGEXP.test(err.message)) {
+      tryReconnect = false;
+      self.emit(&#x27;error&#x27;, err);
+    }
+  });
+
+  this.socket.on(&#x27;timeout&#x27;, function() {
+    if (self.socket.readyState !== &#x27;open&#x27;) {
+      self.socket.destroy();
+    }
+  });
+
+  this.socket.on(&#x27;connect&#x27;, function () {
+    self.retries = 0;
+  });
+
+  this.socket.on(&#x27;close&#x27;, function (had_error) {
+    self.connected = false;
+
+    if (self.terminating) {
+      return;
+    }
+
+    if (self.max_connect_retries &#x3c; 0 || self.retries &#x3c; self.max_connect_retries) {
+      if (!self.connecting) {
+        setTimeout(function () {
+          self.connect();
+        }, self.timeout_connect_retries);
+      }
+    } else {
+      self.log_queue = [];
+      self.silent = true;
+      self.emit(&#x27;error&#x27;, new Error(&#x27;Max retries reached, transport in silent mode, OFFLINE&#x27;));
+    }
+  });
+
+  if (!this.ssl_enable) {
+    this.socket.connect(self.port, self.host, function () {
+      self.announce();
+      self.connecting = false;
+    });
+  }
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  // We want to avoid copy-by-reference for meta defaults, so make sure it&#x27;s a flat object.
+  for (var property in this.meta_defaults) {
+    if (typeof this.meta_defaults[property] === &#x27;object&#x27;) {
+      delete this.meta_defaults[property];
+    }
+  }
+
+  this.<span class="apidocCodeKeywordSpan">connect</span>();
+};
+
+//
+// Inherit from `winston.Transport`.
+//
+util.inherits(Logstash, winston.Transport);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.winston-logstash.Logstash.prototype.flush" id="apidoc.element.winston-logstash.Logstash.prototype.flush">
+        function <span class="apidocSignatureSpan">winston-logstash.Logstash.prototype.</span>flush
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">flush = function () {
+  var self = this;
+
+  for (var i = 0; i &#x3c; self.log_queue.length; i++) {
+    self.sendLog(self.log_queue[i].message, self.log_queue[i].callback);
+  }
+  self.log_queue.length = 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  self.socket = null;
+}
+};
+
+Logstash.prototype.announce = function () {
+var self = this;
+self.connected = true;
+self.<span class="apidocCodeKeywordSpan">flush</span>();
+if (self.terminating) {
+  self.close();
+}
+};
+
+Logstash.prototype.flush = function () {
+var self = this;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.winston-logstash.Logstash.prototype.getQueueLength" id="apidoc.element.winston-logstash.Logstash.prototype.getQueueLength">
+        function <span class="apidocSignatureSpan">winston-logstash.Logstash.prototype.</span>getQueueLength
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getQueueLength = function () {
+  return this.log_queue.length;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.winston-logstash.Logstash.prototype.log" id="apidoc.element.winston-logstash.Logstash.prototype.log">
+        function <span class="apidocSignatureSpan">winston-logstash.Logstash.prototype.</span>log
+        <span class="apidocSignatureSpan">(level, msg, meta, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">log = function (level, msg, meta, callback) {
+  var self = this,
+      meta = winston.clone(meta || {}),
+      log_entry;
+
+  for (var property in this.meta_defaults) {
+    meta[property] = this.meta_defaults[property];
+  }
+
+  if (self.silent) {
+    return callback(null, true);
+  }
+
+  if (self.strip_colors) {
+    msg = msg.stripColors;
+
+    // Let&#x27;s get rid of colors on our meta properties too.
+    if (typeof meta === &#x27;object&#x27;) {
+      for (var property in meta) {
+        meta[property] = meta[property].stripColors;
+      }
+    }
+  }
+
+  log_entry = common.log({
+    level: level,
+    message: msg,
+    node_name: this.node_name,
+    meta: meta,
+    timestamp: self.timestamp,
+    json: true,
+    label: this.label
+  });
+
+  if (!self.connected) {
+    self.log_queue.push({
+      message: log_entry,
+      callback: function () {
+        self.emit(&#x27;logged&#x27;);
+        callback(null, true);
+      }
+    });
+  } else {
+    self.sendLog(log_entry, function () {
+      self.emit(&#x27;logged&#x27;);
+      callback(null, true);
+    });
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if (typeof meta === &#x27;object&#x27;) {
+    for (var property in meta) {
+      meta[property] = meta[property].stripColors;
+    }
+  }
+}
+
+log_entry = common.<span class="apidocCodeKeywordSpan">log</span>({
+  level: level,
+  message: msg,
+  node_name: this.node_name,
+  meta: meta,
+  timestamp: self.timestamp,
+  json: true,
+  label: this.label
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.winston-logstash.Logstash.prototype.sendLog" id="apidoc.element.winston-logstash.Logstash.prototype.sendLog">
+        function <span class="apidocSignatureSpan">winston-logstash.Logstash.prototype.</span>sendLog
+        <span class="apidocSignatureSpan">(message, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sendLog = function (message, callback) {
+  var self = this;
+  callback = callback || function () {};
+
+  self.socket.write(message + &#x27;\n&#x27;);
+  callback();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      message: log_entry,
+      callback: function () {
+        self.emit(&#x27;logged&#x27;);
+        callback(null, true);
+      }
+    });
+  } else {
+    self.<span class="apidocCodeKeywordSpan">sendLog</span>(log_entry, function () {
+      self.emit(&#x27;logged&#x27;);
+      callback(null, true);
+    });
+  }
+};
+
+Logstash.prototype.connect = function () {
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.winston-logstash.Logstash.super_" id="apidoc.module.winston-logstash.Logstash.super_">module winston-logstash.Logstash.super_</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.winston-logstash.Logstash.super_.super_" id="apidoc.element.winston-logstash.Logstash.super_.super_">
+        function <span class="apidocSignatureSpan">winston-logstash.Logstash.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.winston-logstash.Logstash.super_.prototype" id="apidoc.module.winston-logstash.Logstash.super_.prototype">module winston-logstash.Logstash.super_.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.winston-logstash.Logstash.super_.prototype.formatQuery" id="apidoc.element.winston-logstash.Logstash.super_.prototype.formatQuery">
+        function <span class="apidocSignatureSpan">winston-logstash.Logstash.super_.prototype.</span>formatQuery
+        <span class="apidocSignatureSpan">(query)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">formatQuery = function (query) {
+  return query;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.winston-logstash.Logstash.super_.prototype.formatResults" id="apidoc.element.winston-logstash.Logstash.super_.prototype.formatResults">
+        function <span class="apidocSignatureSpan">winston-logstash.Logstash.super_.prototype.</span>formatResults
+        <span class="apidocSignatureSpan">(results, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">formatResults = function (results, options) {
+  return results;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.winston-logstash.Logstash.super_.prototype.logException" id="apidoc.element.winston-logstash.Logstash.super_.prototype.logException">
+        function <span class="apidocSignatureSpan">winston-logstash.Logstash.super_.prototype.</span>logException
+        <span class="apidocSignatureSpan">(msg, meta, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">logException = function (msg, meta, callback) {
+  var self = this,
+      called;
+
+  if (this.silent) {
+    return callback();
+  }
+
+  function onComplete () {
+    if (!called) {
+      called = true;
+      self.removeListener(&#x27;logged&#x27;, onComplete);
+      self.removeListener(&#x27;error&#x27;, onComplete);
+      callback();
+    }
+  }
+
+  this.once(&#x27;logged&#x27;, onComplete);
+  this.once(&#x27;error&#x27;, onComplete);
+  this.log(self.exceptionsLevel, msg, meta, function () { });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.winston-logstash.Logstash.super_.prototype.normalizeQuery" id="apidoc.element.winston-logstash.Logstash.super_.prototype.normalizeQuery">
+        function <span class="apidocSignatureSpan">winston-logstash.Logstash.super_.prototype.</span>normalizeQuery
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">normalizeQuery = function (options) {
+  //
+  // Use options similar to loggly.
+  // [See Loggly Search API](http://wiki.loggly.com/retrieve_events#optional)
+  //
+
+  options = options || {};
+
+  // limit
+  options.rows = options.rows || options.limit || 10;
+
+  // starting row offset
+  options.start = options.start || 0;
+
+  // now
+  options.until = options.until || new Date;
+  if (typeof options.until !== &#x27;object&#x27;) {
+    options.until = new Date(options.until);
+  }
+
+  // now - 24
+  options.from = options.from || (options.until - (24 * 60 * 60 * 1000));
+  if (typeof options.from !== &#x27;object&#x27;) {
+    options.from = new Date(options.from);
+  }
+
+
+  // &#x27;asc&#x27; or &#x27;desc&#x27;
+  options.order = options.order || &#x27;desc&#x27;;
+
+  // which fields to select
+  options.fields = options.fields;
+
+  return options;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
